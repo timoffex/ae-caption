@@ -15,7 +15,7 @@ end
 class Transcriber
   def initialize(options, transcript_filename:)
     @should_insert_timestamps = options.key?(:interval)
-    @timestamp_interval = options[:interval].to_i
+    @timestamp_interval = options[:interval].to_f
     @clip_start_seconds = options[:clip_start_seconds] || 0
     @transcript_filename = transcript_filename
   end
